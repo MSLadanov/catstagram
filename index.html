@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Catstagram</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <style>
+      .modal { overflow-y:visible; }
+      .modal .modal-content {
+        height: 512px;
+    padding: 0px 20px 0px 20px;
+}
+.card-content{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-content div{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+.card-menu{
+  display: flex;
+  justify-content: center;
+}
+      .cat-card-image{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 20px 0;
+        border-radius: 2px 2px 0 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+     
+      @media (min-width: 600px)  { 
+        .cat-card-image img{
+          height: 200px;
+          width: 200px;
+        }
+       }
+  
+      @media (max-width: 600px) { 
+        .cat-card-image img{
+          height: auto;
+          width: 100%;
+        }
+       }
+  
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Catstagram</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a data-action="openModal" class="modal-trigger" href="#modal1">Upload cat</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="modal2" class="modal">
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>    
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <form id="addcat" action="">
+          <div class="input-field col s6">
+            <input id="id" type="number" class="validate" min="0">
+            <label for="id">id</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="description" type="text" class="validate">
+            <label for="description">Description</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="img_link" type="text" class="validate">
+            <label for="img_link">Image link</label>
+          </div>
+          <label>
+            <input type="checkbox" id="favourite" />
+            <span>Favourite</span>
+          </label>
+          <p class="range-field">
+            <label for="age">Age</label>
+            <input type="range" id="age" min="1" max="9" value="0"/>
+          </p>
+          <p class="range-field">
+            <label for="rate">Rate</label>
+            <input type="range" id="rate" min="1" max="10" value="0"/>
+          </p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="waves-effect waves-light btn green darken-3" data-action="upload">Upload</button>
+      </div>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a data-action="openModal" class="modal-trigger" href="#modal1">Upload cat</a></li>
+    </ul>
+    <div class="container">
+      <div class="section">
+        <!--   Icon Section   -->
+        <div class="row content">
+
+
+      </div>
+      <br /><br />
+    </div>
+
+    <footer class="page-footer orange">
+      <div class="footer-copyright">
+        <div class="container">
+          Made by
+          <a class="orange-text text-lighten-3" href="#"
+            >MSLadanov</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
